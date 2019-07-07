@@ -8,7 +8,7 @@ class PriorityQueue {
       value,
       priority
     });
-    // this.sort();
+
     if (this.values.length === 1) return this;
     let i = this.values.length - 1;
     while (i > 0) {
@@ -26,7 +26,6 @@ class PriorityQueue {
   }
 
   dequeue() {
-    // return this.values.shift();
     let result = this.values[0];
     const last = this.values.pop();
     if (this.values.length === 0) return result;
@@ -58,10 +57,6 @@ class PriorityQueue {
     } while (swap);
 
     return result;
-  }
-
-  sort() {
-    this.values.sort((a,b) => a.priority - b.priority);
   }
 }
 
